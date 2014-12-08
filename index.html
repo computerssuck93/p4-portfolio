@@ -1,79 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Your Website</title>
-	
- <link rel="icon" href="favicon.ico">	
- 
-  <link rel="stylesheet" href="css/normalize.css">				
-  <link rel="stylesheet" href="css/gallery.css">	 
-  <link rel="stylesheet" href="css/styles.css">	
-	
-</head>
-<body>
-	
-	<div class="container showgrid">
-		
-		<!-- Your Content -->
-		<div class="gallery items-4">
 
-			<!-- THESE ARE THE CONTAINERS FOR THE IMAGES -->
-			  <div id="item-1" class="control-operator"></div>
-			  <div id="item-2" class="control-operator"></div>
-			  <div id="item-3" class="control-operator"></div>
-			  <div id="item-4" class="control-operator"></div>
-			  <div id="item-5" class="control-operator"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>P4 - Portfolio | Jimmy Walters</title>
 
-			  <!-- THESE ARE THE ACTUAL IMAGES -->
-			  <figure class="item">
-			    <img src="img/1.jpg" alt="">
-			  </figure>
+    <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Balthazar' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" media="screen">
+    <link rel="stylesheet" href="css/styles.css">
 
-			  <figure class="item">
-			    <img src="img/2.jpg" alt="">
-			  </figure>
+  </head>
 
-			  <figure class="item">
-			    <img src="img/3.jpg" alt="">
-			  </figure>
+  <body>
 
-			  <figure class="item">
-			    <img src="img/4.jpg" alt="">
-			  </figure>
-
-			  <figure class="item">
-			    <img src="http://lorempixel.com/960/400" alt="">
-			  </figure>
+    <div class="container showgrid">
 
 
-			  <!-- THESE ARE CONTROLS -->
-			  <div class="controls">
-			    <a href="#item-1" class="control-button">
-			    	<img src="img/1-thumb.jpg" alt="">
-			    </a>
-			    <a href="#item-2" class="control-button">
-			    	<img src="img/2-thumb.jpg" alt="">
-			    </a>
-			    <a href="#item-3" class="control-button">
-					<img src="img/3-thumb.jpg" alt="">
-			    </a>
-			    <a href="#item-4" class="control-button">
-					<img src="img/4-thumb.jpg" alt="">
-			    </a>
-			    <a href="#item-5" class="control-button">
-					<img src="http://lorempixel.com/100/100" alt="">
-			    </a>
+      <h1>Portfolio Gallery</h1>
+      <!-- Your Content -->
+
+      <div class="center-wrap">
+
+        <div class="effect-block" effect="edge-flip" direction="from-left">
+          <div class="fore"></div>
+
+          <div class="fore-content">
+            <p>Portfolio 1 - Local Logo Re-Design</p>
+            <a href="img/img1.png" target="_blank">
+              <img src="img/img1-thumb.png">
+            </a>
+
+          </div>
+        </div>
 
 
-			  </div>
-			</div>
+        <div class="effect-block" effect="edge-flip" direction="from-top">
+          <div class="fore"></div>
 
-		<!-- Clearfix -->
-		<div class="clear"></div>
+          <div class="fore-content">
+            <p>Portfolio 2 - Style Tile Logo</p>
+            <a href="img/img2.png" target="_blank">
+              <img src="img/img2-thumb.png">
+            </a>
+          </div>
+        </div>
 
-	</div>
-	
-  
-</body>
+        <div class="effect-block" effect="edge-flip" direction="from-right">
+          <div class="fore"></div>
+
+          <div class="fore-content">
+            <p>Portfolio 3 - "Target Audience" Ad</p>
+            <a href="img/img3.png" target="_blank">
+              <img src="img/img3-thumb.png">
+            </a>
+          </div>
+        </div>
+
+        <div class="effect-block" effect="edge-flip" direction="from-bottom">
+          <div class="fore"></div>
+
+          <div class="fore-content">
+            <p>Portfolio 4 - Movie Poster Design</p>
+            <a href="img/img4.png" target="_blank">
+              <img src="img/img4-thumb.png">
+            </a>
+          </div>
+        </div>
+
+        <!-- Clearfix -->
+        <div class="clear"></div>
+
+      <!-- END "Center-Wrap Div" -->
+      </div>
+
+    <!-- END "Container Showgrid Div" -->
+    </div>
+
+    <div class="license">
+      <footer>
+
+        <p>Source: <a href="http://codepen.io/meChrisReed/pen/ioEnB" target="_blank">Codepen</a></p>
+        <p>License: <a href="license.txt" target="_blank">Documentation</a></p>
+      </footer>
+    </div>
+
+
+  </body>
+
 </html>

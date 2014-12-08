@@ -1,52 +1,217 @@
 /* Your Website Styles */
 
-
-
-/* Gallery Stying */
-.gallery .control-button {
-  color: #ccc;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.gallery .control-button:hover {
-  color: white;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-/*
-	Theme controls how everything looks in Gallery CSS.
-*/
-.gallery {
+body > p {
   position: relative;
-}
-.gallery .item {
-  height: 400px;
-  overflow: hidden;
-  text-align: center;
-  background: #4d87e2;
-}
-.gallery .controls {
-  position: absolute;
-  bottom: -120px;
-  width: 100%;
-  text-align: center;
+  float: left;
+  clear: left;
+  width: 26em;
+  max-width: 90%;
+  padding: 1% 2%;
+  text-indent: 3em;
+  font-size: 18px;
+
 }
 
-.gallery .controls img {
-  border: 5px solid #000;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(70,70,70);
+  background: url("../img/white_cf.png");
+  background-repeat: repeat;
+  color: rgba(255,255,255, .9);
 }
 
-.gallery .control-button {
+h1 {
+  font-family: 'bleeding_cowboysregular', sans-serif;
+  font-size: 5rem;
+  color: #000;
+  letter-spacing: 0.5rem;
+  font-weight: normal;
+  text-align: center;
+
+}
+
+.center-wrap,
+.content-wrap {
+  position: static;
+  display: block;
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.effect-block {
   display: inline-block;
-  margin: 0 .02em;
-  font-size: 3em;
-  text-align: center;
-  text-decoration: none;
-  transition: color .1s;
+  position: relative;
+  float: none;
+
+  width: 20em;
+  height: 20em;
+
+  margin: 1em;
+  background: url("../img/real_cf.png");
+  overflow: hidden;
+}
+
+.fore,
+.fore-content {
+  /*
+    Set the default hidden state without the affects of using visibility
+    Works in conjunction with the overflow of the parent element.
+  */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 1.1rem;
+}
+
+.fore-content > p {
+  padding: 3.5rem 1rem;
+  margin-bottom: 0rem;
+  position: absolute;
+  width: 17.75rem;
+  top: 10.25rem;
+  bottom: 0rem;
+  right: 0rem;
+  left: 0rem;
+
+  font-family: 'Balthazar', serif;
+  font-size: 1.3rem;
+  color: #FFFFFF;
+
+  background-color: rgba(255, 0, 0, 0.33);
+  border-style: solid;
+  border-width: .175rem;
+  border-color: white;
+}
+
+.effect-block > .fore {
+  background-color: inherit;
 }
 
 
-/* Show Grid */
-.showgrid {
-	background: url("../img/grid-bg.png") repeat-y;
+.effect-block:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0%;
+  width: 0%;
+  background-color: rgba(70,70,70,.0);
+  -webkit-transition:
+    background-color .5s,
+    height  .01s .6s,
+    width  .01s .6s;
+}
+
+.effect-block:hover:before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(70,70,70,.4);
+  -webkit-transition:
+    background-color .5s;
+}
+
+
+.effect-block[effect=edge-flip] {
+  -webkit-perspective: 400px;
+  -webkit-transform-style: preserve-3d;
+}
+
+.effect-block[effect=edge-flip] > .fore {
+  -webkit-transition:
+    -webkit-transform .4s;
+}
+
+.effect-block[effect=edge-flip] > .fore-content {
+  -webkit-transition:
+    -webkit-transform .75s;
+}
+
+.effect-block[effect=edge-flip][direction*=from-left] > .fore,
+.effect-block[effect=edge-flip][direction*=from-left] > .fore-content {
+  -webkit-transform: rotateY(120deg);
+  -webkit-transform-origin: left;
+}
+
+.effect-block[effect=edge-flip][direction*=from-left]:hover > .fore,
+.effect-block[effect=edge-flip][direction*=from-left]:hover > .fore-content {
+  -webkit-transform: rotateY(0deg);
+}
+
+.effect-block[effect=edge-flip][direction*=from-top] > .fore,
+.effect-block[effect=edge-flip][direction*=from-top] > .fore-content {
+  -webkit-transform: rotateX(-120deg);
+  -webkit-transform-origin: top;
+}
+
+.effect-block[effect=edge-flip][direction*=from-top]:hover > .fore,
+.effect-block[effect=edge-flip][direction*=from-top]:hover > .fore-content {
+  -webkit-transform: rotateX(0deg);
+}
+
+.effect-block[effect=edge-flip][direction*=from-right] > .fore,
+.effect-block[effect=edge-flip][direction*=from-right] > .fore-content {
+  -webkit-transform: rotateY(-120deg);
+  -webkit-transform-origin: right;
+}
+
+.effect-block[effect=edge-flip][direction*=from-right]:hover > .fore,
+.effect-block[effect=edge-flip][direction*=from-right]:hover > .fore-content {
+  -webkit-transform: rotateY(0deg);
+}
+
+.effect-block[effect=edge-flip][direction*=from-bottom] > .fore,
+.effect-block[effect=edge-flip][direction*=from-bottom] > .fore-content {
+  -webkit-transform: rotateX(120deg);
+  -webkit-transform-origin-x: 50%;
+  -webkit-transform-origin-y: 110%;
+  -webkit-transform-origin-z: initial;
+}
+
+.effect-block[effect=edge-flip][direction*=from-bottom]:hover > .fore,
+.effect-block[effect=edge-flip][direction*=from-bottom]:hover > .fore-content {
+  -webkit-transform: rotateX(0deg);
+}
+
+@media screen and (min-width: 1921px){
+
+  div.license{
+    width: 50%;
+    max-width: 100%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
+
+div.license{
+  width: 40%;
+  max-width: 80%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+footer{
+  margin-top: 5rem;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-bottom: 5rem;
+  width: 30%;
+  max-width: 60%;
+}
+
+footer p{
+  color: #000;
+  font-size: .75rem;
+
+}
+
+footer a{
+  text-decoration: none;
+  font-style: italic;
+  color: rgba(255, 0, 0, 0.85);
+}
+
+footer a:hover{
+  font-weight: bold;
 }
